@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitCobblers.StockTrader.And
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitCobblers.StockTrader.iOS", "BitCobblers.StockTrader.iOS\BitCobblers.StockTrader.iOS.csproj", "{1ABF85D6-1C14-48ED-8DB4-5A2EBAF67F7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitCobblers.StockTrader.Tests", "BitCobblers.StockTrader.Tests\BitCobblers.StockTrader.Tests.csproj", "{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,26 @@ Global
 		{1ABF85D6-1C14-48ED-8DB4-5A2EBAF67F7E}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{1ABF85D6-1C14-48ED-8DB4-5A2EBAF67F7E}.Release|x64.ActiveCfg = Release|iPhone
 		{1ABF85D6-1C14-48ED-8DB4-5A2EBAF67F7E}.Release|x86.ActiveCfg = Release|iPhone
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Debug|x64.Build.0 = Debug|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Debug|x86.Build.0 = Debug|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Release|iPhone.Build.0 = Release|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Release|x64.ActiveCfg = Release|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Release|x64.Build.0 = Release|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Release|x86.ActiveCfg = Release|Any CPU
+		{7ED2BE16-937C-4257-80F2-C7D2FFBE011F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
