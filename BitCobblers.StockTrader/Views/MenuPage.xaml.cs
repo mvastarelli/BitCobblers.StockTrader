@@ -1,9 +1,7 @@
-﻿using BitCobblers.StockTrader.Models;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
+using BitCobblers.StockTrader.Models;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace BitCobblers.StockTrader.Views
 {
@@ -12,8 +10,9 @@ namespace BitCobblers.StockTrader.Views
     [DesignTimeVisible(false)]
     public partial class MenuPage : ContentPage
     {
-        MainPage RootPage { get => Application.Current.MainPage as MainPage; }
-        List<HomeMenuItem> menuItems;
+        private MainPage RootPage { get => Application.Current.MainPage as MainPage; }
+        private List<HomeMenuItem> menuItems;
+
         public MenuPage()
         {
             InitializeComponent();

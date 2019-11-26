@@ -2,11 +2,9 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
-
-using Xamarin.Forms;
-
 using BitCobblers.StockTrader.Models;
 using BitCobblers.StockTrader.Views;
+using Xamarin.Forms;
 
 namespace BitCobblers.StockTrader.ViewModels
 {
@@ -29,7 +27,7 @@ namespace BitCobblers.StockTrader.ViewModels
             });
         }
 
-        async Task ExecuteLoadItemsCommand()
+        private async Task ExecuteLoadItemsCommand()
         {
             if (IsBusy)
                 return;

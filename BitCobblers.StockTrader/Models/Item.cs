@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BitCobblers.StockTrader.Models
+﻿namespace BitCobblers.StockTrader.Models
 {
     public class Item
     {

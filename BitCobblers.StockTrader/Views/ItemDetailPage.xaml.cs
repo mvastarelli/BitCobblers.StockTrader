@@ -1,10 +1,7 @@
-﻿using System;
-using System.ComponentModel;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿using System.ComponentModel;
 using BitCobblers.StockTrader.Models;
 using BitCobblers.StockTrader.ViewModels;
+using Xamarin.Forms;
 
 namespace BitCobblers.StockTrader.Views
 {
@@ -13,7 +10,7 @@ namespace BitCobblers.StockTrader.Views
     [DesignTimeVisible(false)]
     public partial class ItemDetailPage : ContentPage
     {
-        ItemDetailViewModel viewModel;
+        private ItemDetailViewModel viewModel;
 
         public ItemDetailPage(ItemDetailViewModel viewModel)
         {

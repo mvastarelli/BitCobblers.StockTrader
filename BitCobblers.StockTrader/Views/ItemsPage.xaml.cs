@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
 using BitCobblers.StockTrader.Models;
-using BitCobblers.StockTrader.Views;
 using BitCobblers.StockTrader.ViewModels;
+using Xamarin.Forms;
 
 namespace BitCobblers.StockTrader.Views
 {
@@ -18,7 +11,7 @@ namespace BitCobblers.StockTrader.Views
     [DesignTimeVisible(false)]
     public partial class ItemsPage : ContentPage
     {
-        ItemsViewModel viewModel;
+        private ItemsViewModel viewModel;
 
         public ItemsPage()
         {
@@ -27,7 +20,7 @@ namespace BitCobblers.StockTrader.Views
             BindingContext = viewModel = new ItemsViewModel();
         }
 
-        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        private async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
             var item = args.SelectedItem as Item;
             if (item == null)
@@ -39,7 +32,7 @@ namespace BitCobblers.StockTrader.Views
             ItemsListView.SelectedItem = null;
         }
 
-        async void AddItem_Clicked(object sender, EventArgs e)
+        private async void AddItem_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
         }

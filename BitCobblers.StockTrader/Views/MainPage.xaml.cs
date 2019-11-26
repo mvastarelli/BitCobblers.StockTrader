@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading.Tasks;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
 using BitCobblers.StockTrader.Models;
+using Xamarin.Forms;
 
 namespace BitCobblers.StockTrader.Views
 {
@@ -14,7 +11,8 @@ namespace BitCobblers.StockTrader.Views
     [DesignTimeVisible(false)]
     public partial class MainPage : MasterDetailPage
     {
-        Dictionary<int, NavigationPage> MenuPages = new Dictionary<int, NavigationPage>();
+        private Dictionary<int, NavigationPage> MenuPages = new Dictionary<int, NavigationPage>();
+
         public MainPage()
         {
             InitializeComponent();
@@ -33,6 +31,7 @@ namespace BitCobblers.StockTrader.Views
                     case (int)MenuItemType.Browse:
                         MenuPages.Add(id, new NavigationPage(new ItemsPage()));
                         break;
+
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
                         break;

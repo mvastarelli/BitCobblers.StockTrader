@@ -1,14 +1,11 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using BitCobblers.StockTrader.Services;
+﻿using BitCobblers.StockTrader.Services;
 using BitCobblers.StockTrader.Views;
+using Xamarin.Forms;
 
 namespace BitCobblers.StockTrader
 {
     public partial class App : Application
     {
-
         public App()
         {
             InitializeComponent();
