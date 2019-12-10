@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BitCobblers.StockTrader.Views.AccountSummaryPage"
+             Title="ACCOUNT SUMMARY">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Trade" />
+    </ContentPage.ToolbarItems>
+    <ContentView ControlTemplate="{StaticResource MainPageTemplate}">
+        <Grid Padding="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+
+            <!-- Chart -->
+            <Button Grid.Row="0" Text="Chart goes here" />
+
+            <!-- Positions -->
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <!-- Header -->
+                <Grid Grid.Row="0">
+                    <Grid.Resources>
+                        <Style TargetType="Label">
+                            <Setter Property="FontSize" Value="18" />
+                            <Setter Property="FontAttributes" Value="Bold"/>
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Symbol" />
+                    <Label Grid.Column="1" Text="Price" />
+                    <Label Grid.Column="2" Text="Shares" />
+                    <Label Grid.Column="3" Text="Profit" />
+                </Grid>
+
+                <!-- Listview -->
+                <ListView Grid.Row="1" ItemsSource="{Binding Positions}" HasUnevenRows="True" SeparatorColor="Black" VerticalOptions="FillAndExpand">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="15">
+                                    <Grid.Resources>
+                                        <Style TargetType="Label">
+                                            <Setter Property="FontSize" Value="16" />
+                                        </Style>
+                                    </Grid.Resources>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Text="{Binding Symbol}" />
+                                    <Label Grid.Column="1" Text="{Binding Price}" />
+                                    <Label Grid.Column="2" Text="{Binding Shares}" />
+                                    <Label Grid.Column="3" Text="{Binding Profit}" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+
+            <!-- Footer -->
+            <Grid Grid.Row="2" BackgroundColor="AliceBlue">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Text="Account" />
+                <Label Grid.Column="2" Text="Cash" />
+                <Label Grid.Column="4" Text="Balance" />
+                <Label Grid.Column="6" Text="Profit/Loss" />
+            </Grid>
+        </Grid>
+    </ContentView>
+</ContentPage>

@@ -3,7 +3,15 @@
     public enum MenuItemType
     {
         Browse,
-        About
+        About,
+
+        Home,
+        AccountSummary,
+        Trade,
+        History,
+
+        NewTrade,
+        Deposit
     }
 
     public class HomeMenuItem

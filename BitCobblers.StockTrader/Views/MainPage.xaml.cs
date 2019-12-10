@@ -19,7 +19,7 @@ namespace BitCobblers.StockTrader.Views
 
             MasterBehavior = MasterBehavior.Popover;
 
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+            //MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -34,6 +34,29 @@ namespace BitCobblers.StockTrader.Views
 
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
+                        break;
+
+
+
+                    case (int)MenuItemType.Home:
+                        MenuPages.Add(id, new NavigationPage(new HomePage()));
+                        break;
+                    case (int)MenuItemType.AccountSummary:
+                        MenuPages.Add(id, new NavigationPage(new AccountSummaryPage()));
+                        break;
+                    case (int)MenuItemType.Trade:
+                        MenuPages.Add(id, new NavigationPage(new TradePage()));
+                        break;
+                    case (int)MenuItemType.History:
+                        MenuPages.Add(id, new NavigationPage(new HistoryPage()));
+                        break;
+
+
+                    case (int)MenuItemType.NewTrade:
+                        MenuPages.Add(id, new NavigationPage(new NewTradePage()));
+                        break;
+                    case (int)MenuItemType.Deposit:
+                        MenuPages.Add(id, new NavigationPage(new DepositPage()));
                         break;
                 }
             }
