@@ -2,30 +2,20 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using BitCobblers.StockTrader.Models;
 using BitCobblers.StockTrader.Services;
-using Xamarin.Forms;
 
 namespace BitCobblers.StockTrader.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
-
-        private bool isBusy = false;
-
-        public bool IsBusy
-        {
-            get { return isBusy; }
-            set { SetProperty(ref isBusy, value); }
-        }
+        public INavigationService NavigationService { get; set; }
 
         private string title = string.Empty;
 
         public string Title
         {
             get { return title; }
-            set { SetProperty(ref title, value); }
+            set { _ = SetProperty(ref title, value); }
         }
 
         protected bool SetProperty<T>(ref T backingStore, T value,

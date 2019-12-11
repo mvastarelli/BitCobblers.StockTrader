@@ -1,14 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
+             xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             iOS:Page.UseSafeArea="True"
              x:Class="BitCobblers.StockTrader.Views.TradePage"
-             Title="TRADE">
-    <ContentView ControlTemplate="{StaticResource MainPageTemplate}">
-        <StackLayout VerticalOptions="CenterAndExpand">
-            <Label Text="TODO: Trade" HorizontalOptions="Center" />
+             Title="{Binding Title}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="noSymbolSelected" />
+            <DataTemplate x:Key="validSymbolSelected" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel" />
+        <ToolbarItem Text="Trade" />
+    </ContentPage.ToolbarItems>
+    <ContentView>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- First Row -->
+                <StackLayout Grid.Column="0">
+                    <Label Text="Symbol" />
+                    <Entry />
+                    <Label Text="Quantity" />
+                    <Entry Keyboard="Numeric" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="1">
+                    <Label Text="Action" />
+                    <Picker Title="Select an action" ItemsSource="{Binding Actions}" />
+                    <Label Text="Cash Balance" />
+                    <Label Text="" />
+                </StackLayout>
+            </Grid>
         </StackLayout>
     </ContentView>
 </ContentPage>

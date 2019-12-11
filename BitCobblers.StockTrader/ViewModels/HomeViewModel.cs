@@ -4,9 +4,14 @@ using System.Text;
 
 namespace BitCobblers.StockTrader.ViewModels
 {
-    public class HomeViewModel
+    public class HomeViewModel : BaseViewModel
     {
-        public string Title { get; set; } = "Select Account";
+        public HomeViewModel()
+        {
+            this.Title = "Select Account";
+        }
+
+        //public string Title { get; set; } = "Select Account";
 
         public Account[] Accounts { get; } = new[]
         {
@@ -22,7 +27,7 @@ namespace BitCobblers.StockTrader.ViewModels
         public float Balance { get; set; }
     }
 
-    public class AccountSummaryViewModel
+    public class AccountSummaryViewModel : BaseViewModel
     {
         public Position[] Positions { get; } = new[]
         {
@@ -41,7 +46,7 @@ namespace BitCobblers.StockTrader.ViewModels
         public float Profit { get; set; }
     }
 
-    public class HistoryViewModel
+    public class HistoryViewModel : BaseViewModel
     {
         public Transaction[] Transactions { get; } = new[]
         {
@@ -60,7 +65,7 @@ namespace BitCobblers.StockTrader.ViewModels
         public float Cost { get; set; }
     }
 
-    public class NewTradeViewModel
+    public class TradeViewModel : BaseViewModel
     {
         public TradeAction[] Actions { get; } = new[]
         {

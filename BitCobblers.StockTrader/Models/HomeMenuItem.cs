@@ -3,14 +3,14 @@
     public enum MenuItemType
     {
         Browse,
-        About,
+        //About,
 
         Home,
         AccountSummary,
         Trade,
         History,
 
-        NewTrade,
+        //NewTrade,
         Deposit
     }
 

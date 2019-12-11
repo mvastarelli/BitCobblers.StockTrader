@@ -19,19 +19,19 @@ namespace BitCobblers.StockTrader.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
+                //new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
 
 
                 new HomeMenuItem { Id = MenuItemType.Home, Title="Home" },
                 new HomeMenuItem { Id = MenuItemType.AccountSummary, Title="Account Summary" },
                 new HomeMenuItem { Id = MenuItemType.Trade, Title="Trade" },
-                new HomeMenuItem { Id = MenuItemType.History, Title="History" },
 
-                new HomeMenuItem { Id = MenuItemType.About, Title="About" },
 
-                new HomeMenuItem { Id = MenuItemType.NewTrade, Title="New Trade" },
+               // new HomeMenuItem { Id = MenuItemType.About, Title="About" },
+
+                //new HomeMenuItem { Id = MenuItemType.NewTrade, Title="New Trade" },
                 new HomeMenuItem { Id = MenuItemType.Deposit, Title="Deposit" },
-
+                new HomeMenuItem { Id = MenuItemType.History, Title="History" }
             };
 
             ListViewMenu.ItemsSource = menuItems;

@@ -10,12 +10,19 @@ using Xamarin.Forms.Xaml;
 namespace BitCobblers.StockTrader.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomePage : ContentPage
+    public partial class HomePage : ContentPage, IHaveAViewModel<HomeViewModel>
     {
         public HomePage()
         {
             InitializeComponent();
             BindingContext = new HomeViewModel();
         }
+
+        public HomeViewModel ViewModel => throw new NotImplementedException();
+    }
+
+    public interface IHaveAViewModel<TViewModel> where TViewModel : BaseViewModel
+    {
+        TViewModel ViewModel { get; }
     }
 }

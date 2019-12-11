@@ -8,7 +8,7 @@
              Title="HISTORY">
     <ContentView ControlTemplate="{StaticResource MainPageTemplate}">
         <!-- Positions -->
-        <Grid>
+        <Grid Padding="15">
             <Grid.RowDefinitions>
                 <RowDefinition Height="30" />
                 <RowDefinition Height="*" />
